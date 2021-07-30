@@ -1,0 +1,211 @@
+mixin navbar()
+  nav.navbar.navbar-expand-lg.navbar-dark(style="background-color:#008ece;")
+    .container-lg
+      a.navbar-brand(href="index.html")="AviaTour"
+      button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target=".Nav_Avia" aria-controls="Nav_Avia" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      .collapse.navbar-collapse.Nav_Avia
+        ul.navbar-nav.me-auto.mb-2.mb-lg-0.mt-lg-1
+          li.nav-item
+            a.nav-link.active(href="index.html")="Главная"
+          li.nav-item.dropdown
+            a.nav-link.active.dropdown-toggle#ForTourist(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false")="Туристам"
+            ul.dropdown-menu(aria-labelledby="ForTourist")
+              li
+                a.dropdown-item(href="podbor_tura.html")="Подбор тура"
+              li
+                a.dropdown-item(href="promotions.html")="Акции и предложения"
+              li
+                a.dropdown-item(href="beach.html")="Типы отдыха"
+              li
+                a.dropdown-item(href="catalog.html")="Каталог отелей"
+              li
+                a.dropdown-item(href="flight.html")="Авиаперелеты"
+              li
+                a.dropdown-item(href="#")="Визы и паспорта"
+              li
+                a.dropdown-item(href="#")="Памятка туриста"
+              li
+                a.dropdown-item(href="#")="Выдача документов"
+              li
+                a.dropdown-item(href="#")="Новости"
+              li
+                a.dropdown-item(href="#")="Купить тур онлайн"
+              li
+                a.dropdown-item(href="#")="Отзывы и предложения"
+          li.nav-item.dropdown
+            a.nav-link.active.dropdown-toggle#ForAgency(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false")="Агентствам"
+            ul.dropdown-menu(aria-labelledby="ForAgency")
+              li
+                a.dropdown-item(href="#")="Агентская страница"
+              li
+                a.dropdown-item(href="#")="Кабинет агентства"
+              li
+                a.dropdown-item(href="#")="Сотрудничество"
+              li
+                a.dropdown-item(href="#")="Франчайзинг"
+              li
+                a.dropdown-item(href="#")="Выдача документов"
+              li
+                a.dropdown-item(href="#")="Вопросы и ответы"
+          li.nav-item.dropdown
+            a.nav-link.active.dropdown-toggle#BuyPlace(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false")="Где купить"
+            ul.dropdown-menu(aria-labelledby="BuyPlace")
+              li
+                a.dropdown-item(href="#")="Купить онлайн"
+              li
+                a.dropdown-item(href="#")="Купить в агентстве"
+        form.d-flex
+          input.form-control.me-2(type="search" placeholder="Поиск" aria-label="Search")
+          button.btn.btn-warning(type="submit")="Найти"
+
+mixin select_n($n)
+  - var a=1; 
+  while a<=$n
+    option(value=a)=a++
+
+mixin content(n,m)
+  - var text1="img/content";
+  - var text2="/content";
+  - var text3=".png";
+  - var text4=text1+n+text2+n+'_'+m+text3;
+  .col-lg-4.col-md-6.col-12.g-4
+    a(href="#")
+      img.w-100.d-block.con-col.rounded-3(src=text4 alt="...")
+mixin MenuForm1()
+ form.container-lg.d-flex.flex-lg-row.flex-column.mt-2.mb-4.mb-lg-0#Menu1
+    select.form-select#Select1.my-1.my-lg-0(aria-label="Select1")
+      option(selected)="Город вылета:"
+      optgroup(label="Россия")
+        option(value="Moscow")="Москва"
+        option(value="Spb")="Санкт-Петербург"
+        option(value="Kazan")="Казань"
+        option(value="Novosibirsk")="Новосибирск"
+        option(value="Volgograd")="Волгоград"
+        option(value="Krasnodar")="Краснодар"
+        option(value="NNovgorod")="Нижний Новгород"
+      optgroup(label="Беларусь")
+        option(value="Minsk")="Минск"
+        option(value="Vitebsk")="Витебск"
+    select.form-select.my-1.my-lg-0(aria-label="Select2")
+      option(selected)="Страна:"
+      option(value="USA")="США"
+      option(value="Turkey")="Турция"
+      option(value="UAE")="ОАЭ"
+      option(value="Tunisia")="Тунис"
+      option(value="Russia")="Россия"
+      option(value="Italy")="Италия"
+      option(value="Egypt")="Египет"
+      option(value="Montenegro")="Черногория"
+      option(value="Greece")="Греция"
+      option(value="Maldives")="Мальдивы"
+    select.form-select.my-1.my-lg-0(aria-label="Select3")
+      option(selected)="Ночей:"
+      +select_n(30)
+    input.form-control.my-1.my-lg-0(type="text" placeholder="Количество взрослых:")
+    input.form-control.my-1.my-lg-0(type="text" placeholder="Количество детей:")
+    input.btn.btn-warning.my-1.my-lg-0(type="submit" value="Найти")
+
+mixin promote(h,n,text)
+  - var way1='img/promotions/promotions'
+  - var way2='.jpg'
+  - var way3=way1+n+way2
+  .d-flex.flex-column.mt-5(style="border-bottom:2px solid #eaeaea")
+    a(href="#" style="text-decoration:none;color:black;")
+      h5.mb-4=h
+    .d-flex.pb-3.flex-md-row.flex-column.promcont
+      a.me-md-5(href="#")
+        img.rounded-3(src=way3 alt="...")
+      p.d-flex.align-items-center=text
+
+mixin simpleBlock(img,name,text)
+  .col-12.col-md-6.col-lg-4.simpleBlock
+    .d-flex.flex-column
+      a.my-2(href="#")
+        img.d-block.w-100(src=img alt="...")
+      a(href="#" style="text-decoration:none;color:black;")=name
+      p=text
+
+mixin footer()
+  footer.pt-4.my-lg-5.mb-4.pt-lg-5.border-top.md-text-start
+    .row.justify-content-center
+      .col-6.col-lg-2.ms-0.ms-xl-3.mb-lg-0.mb-2
+        a.foot_a_H(href="#")
+          h6="Туристам"
+        ul.list-unstyled.text-small
+          li
+            a.link-secondary(href="#")="Подбор тура"
+          li
+            a.link-secondary(href="#")="Акции и спецпредложения"
+          li
+            a.link-secondary(href="#")="Типы отдыха"
+          li
+            a.link-secondary(href="#")="Каталог отелей"
+          li
+            a.link-secondary(href="#")="Авиаперелеты"
+          li
+            a.link-secondary(href="#")="Визы и паспорта"
+          li
+            a.link-secondary(href="#")="Памятка туриста"
+          li
+            a.link-secondary(href="#")="Выдача документов"
+          li
+            a.link-secondary(href="#")="Новости"
+          li
+            a.link-secondary(href="#")="Отзывы и предложения"
+      .col-6.col-lg-2.ms-0.ms-xl-3.mb-lg-0.mb-2
+        a.foot_a_H(href="#")
+          h6="Агентствам"
+        ul.list-unstyled.text-small
+          li
+            a.link-secondary(href="#")="Агентская страница"
+          li
+            a.link-secondary(href="#")="Кабинет агентства"
+          li
+            a.link-secondary(href="#")="Сотрудничество"
+          li
+            a.link-secondary(href="#")="Франчайзинг"
+          li
+            a.link-secondary(href="#")="Выдача документов"
+          li
+            a.link-secondary(href="#")="Вопросы и ответы"
+      .col-6.col-lg-2.ms-0.ms-xl-3.mb-lg-0.mb-2
+        a.foot_a_H(href="#")
+          h6="О компании"
+        ul.list-unstyled.text-small
+          li
+            a.link-secondary(href="#")="О компании"
+          li
+            a.link-secondary(href="#")="Новостной центр"
+          li
+            a.link-secondary(href="#")="Пресса о нас"
+          li
+            a.link-secondary(href="#")="Пресс-релизы"
+          li
+            a.link-secondary(href="#")="Вакансии"
+          li
+            a.link-secondary(href="#")="Контакты"
+          li
+            a.link-secondary(href="#")="Награды"
+          li
+            a.link-secondary(href="#")="Партнеры"
+          li
+            a.link-secondary(href="#")="Корпоративная культура"
+          li
+            a.link-secondary(href="#")="Партнеры в регионах"
+          li
+            a.link-secondary(href="#")="Принимающие офисы"
+      .col-6.col-lg-2.ms-0.ms-xl-3.mb-lg-0.mb-2
+        a.foot_a_H(href="#")
+          h6="Корпоративным клиентам"
+        ul.list-unstyled.text-small
+          li
+            a.link-secondary(href="#")="Корпоративный отдых и проекты"
+          li
+            a.link-secondary(href="#")="Примеры корпоративных программ"
+          li
+            a.link-secondary(href="#")="Оформление заявки"
+          li
+            a.link-secondary(href="#")="Отели с конференц-залами"
+          li
+            a.link-secondary(href="#")="Нестандартные варианты размещения"

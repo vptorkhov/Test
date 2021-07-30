@@ -1,0 +1,86 @@
+include ../_assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" }) 
+include layout/js-css.pug
+include my_mixin/mix1.pug
+doctype html
+html
+  head
+    title="Отель+Перелет"
+    meta(name="viewport", content="width=device-width,initial-scale=1.0,  shrink-to-fit=no")
+    link(type="image/ico", href='img/favicon.ico', rel='shortcut icon')
+    link(rel="stylesheet" href="css/style_podbor_tura.css")
+  body
+    .container-fluid.pb-lg-5#Menu(style="background-color:#008ece;")
+      +navbar()
+      .container
+        h2.text-lg-start.text-center.text-white.my-5="Бронируйте вместе отель+перелет и экономьте до 40%"
+        ul.nav.container-lg.d-flex.flex-row.flex-lg-row.mb-lg-2#MenuTab
+          .row.text-center
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="podbor_tura.html" )="Туры"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" href="#" style="border-bottom:4px solid yellow;")="Отель+Перелет"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="#")="Отели"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="flight.html")="Авиабилеты"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="#")="Экскурсии"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="#")="Трансферы"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="#")="Аренда авто"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="#")="Распродажи"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="#")="Оставить заявку"
+        #MenuForm1()
+          form.container-lg.d-flex.flex-lg-row.flex-column.mt-2.mb-4.mb-lg-0#Menu1
+            select.form-select#Select1.my-1.my-lg-0(aria-label="Select1")
+              option(selected)="Город вылета:"
+              optgroup(label="Россия")
+                option(value="Moscow")="Москва"
+                option(value="Spb")="Санкт-Петербург"
+                option(value="Kazan")="Казань"
+                option(value="Novosibirsk")="Новосибирск"
+                option(value="Volgograd")="Волгоград"
+                option(value="Krasnodar")="Краснодар"
+                option(value="NNovgorod")="Нижний Новгород"
+              optgroup(label="Беларусь")
+                option(value="Minsk")="Минск"
+                option(value="Vitebsk")="Витебск"
+            input.form-control.my-1.my-lg-0(type="text" placeholder="Куда:")
+            select.form-select.my-1.my-lg-0(aria-label="Select3")
+              option(selected)="Ночей:"
+              +select_n(30)
+            input.form-control.my-1.my-lg-0(type="text" placeholder="Количество взрослых:")
+            input.form-control.my-1.my-lg-0(type="text" placeholder="Количество детей:")
+            input.btn.btn-warning.my-1.my-lg-0(type="submit" value="Найти")
+    .container.my-5#Info1
+      .row.d-flex.flex-lg-row.flex-column.justify-content-center.align-items.center
+        .col-lg-4.d-flex.col-12
+          img.me-2(src="img/podbor/podbor1.png" style="height:80px; width:80px;")
+          .d-flex.flex-column.w-75
+            h6="Поддержка 24/7"
+            p="Наша служба заботы поможет забронировать отель онлайн. Если у вас возник вопрос в поездке или при заселении, оператор будет круглосуточно на связи и найдет решение в кратчайший срок"
+        .col-lg-4.d-flex.col-12
+          img.me-2(src="img/podbor/podbor2.png" style="height:80px; width:80px;")
+          .d-flex.flex-column.w-75
+            h6="Экономия до 40%"
+            p="Благодаря специальным пакетным тарифам от авиакомпаний и отелей, вы получаете более выгодную стоимость. Также в процессе бронирования вы сможете добавить страховку и трансфер по более низкой цене"
+        .col-lg-4.d-flex.col-12
+          img.me-2(src="img/podbor/podbor4.png" style="height:80px; width:80px;")
+          .d-flex.flex-column.w-75
+            h6="Тур в любую точку мира"
+            p="На нашем сайте вы можете выбрать тур из любого аэропорта в любую точку мира. Вам доступно множество авиакомпаний, а также более 1 000 000 отелей, хостелов, апартаментов и вилл по всему миру"
+    .container.d-flex.flex-column.align-items-center.mt-5#content5
+      h2.text-center="Популярные направления"
+      .container.row.d-flex.flex-row
+        +content(5,1)
+        +content(5,2)
+        +content(5,3)
+    .container.d-flex.flex-column.align-items-center.mt-5#Info2
+      h1.text-center="Подбор и бронирование туров онлайн"
+      p.mt-5.lh-lg="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac faucibus erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse facilisis ornare dui, at faucibus tellus fermentum at. Aliquam sit amet faucibus nibh. Donec mauris ex, placerat vitae eleifend aliquet, auctor a elit. Vestibulum sapien lorem, rhoncus ut facilisis vel, porta sit amet velit. Integer placerat mauris ut nisl mattis mattis. Etiam vestibulum nisl sed libero tincidunt, sit amet iaculis erat vestibulum. Nullam eget leo vitae elit accumsan lobortis vel auctor nisi."
+    +footer()
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous")

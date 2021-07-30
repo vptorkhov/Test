@@ -1,0 +1,70 @@
+include ../_assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" }) 
+include layout/js-css.pug
+include my_mixin/mix1.pug
+doctype html
+html
+  head
+    title="Подбор тура"
+    meta(name="viewport", content="width=device-width,initial-scale=1.0,  shrink-to-fit=no")
+    link(type="image/ico", href='img/favicon.ico', rel='shortcut icon')
+    link(rel="stylesheet" href="css/style_podbor_tura.css")
+  body
+    .container-fluid.pb-lg-5#Menu(style="background-color:#008ece;")
+      +navbar()
+      .container
+        h2.text-lg-start.text-center.text-white.mt-5="Бронируйте туры онлайн"
+        ul.nav.container-lg.d-flex.flex-row.flex-lg-row.mb-lg-2#MenuTab
+          .row.text-center
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" href="#" style="border-bottom:4px solid yellow;")="Туры"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" href="hotel_avia.html" target="_blank")="Отель+Перелет"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="#")="Отели"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="flight.html")="Авиабилеты"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="#")="Экскурсии"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="#")="Трансферы"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="#")="Аренда авто"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="#")="Распродажи"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="#")="Оставить заявку"
+        #MenuForm1
+          +MenuForm1()
+    .container.my-5#Info1
+      .row.d-flex.flex-lg-row.flex-column.justify-content-center.align-items.center
+        .col-lg-4.d-flex.col-12
+          img.me-2(src="img/podbor/podbor1.png" style="height:80px; width:80px;")
+          .d-flex.flex-column.w-75
+            h6="Поддержка 24/7"
+            p="Наша служба заботы поможет забронировать тур онлайн. Если у вас вопрос возник в поездке, ваш персональных менеджер будет круглосуточно на связи и найдёт решение в кратчайший срок"
+        .col-lg-4.d-flex.col-12
+          img.me-2(src="img/podbor/podbor2.png" style="height:80px; width:80px;")
+          .d-flex.flex-column.w-75
+            h6="Оплата частями без процентов"
+            p="Внесите предоплату 10% от стоимости - и тур ваш! Остальную часть оплаты необходимо внести до установленных сроков, но не позднее, чем 7 дней до вылета"
+        .col-lg-4.d-flex.col-12
+          img.me-2(src="img/podbor/podbor3.png" style="height:80px; width:80px;")
+          .d-flex.flex-column.w-75
+            h6="Бесплатная отмена тура"
+            p="Воспользуйтесь акцией бесплатной отмены тура! Никаких рисков: тур позже можно отменить, так что успейте забронировать сегодня по отличной цене"
+    .container.d-flex.flex-column.align-items-center.mt-5#content3
+      h1.text-center="Лучшие предложения для отдыха"
+      .container.row.d-flex.flex-row
+        +content(3,1)
+        +content(3,2)
+        +content(3,3)
+        +content(3,4)
+        +content(3,5)
+        +content(3,6)
+      a.btn.btn-outline-primary.mt-4(role="button" href="#")="Показать больше"
+    .container.d-flex.flex-column.align-items-center.mt-5#Info2
+      h1.text-center="Подбор и бронирование туров онлайн"
+      p.mt-5.lh-lg="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac faucibus erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse facilisis ornare dui, at faucibus tellus fermentum at. Aliquam sit amet faucibus nibh. Donec mauris ex, placerat vitae eleifend aliquet, auctor a elit. Vestibulum sapien lorem, rhoncus ut facilisis vel, porta sit amet velit. Integer placerat mauris ut nisl mattis mattis. Etiam vestibulum nisl sed libero tincidunt, sit amet iaculis erat vestibulum. Nullam eget leo vitae elit accumsan lobortis vel auctor nisi."
+    +footer()
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous")

@@ -1,0 +1,122 @@
+include ../_assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" }) 
+include layout/js-css.pug
+include my_mixin/mix1.pug
+doctype html
+html
+  head
+    title="Авиабилеты"
+    meta(name="viewport", content="width=device-width,initial-scale=1.0,  shrink-to-fit=no")
+    link(type="image/ico", href='img/favicon.ico', rel='shortcut icon')
+    link(rel="stylesheet" href="css/style_podbor_tura.css")
+  body
+    .container-fluid.pb-lg-5#Menu(style="background-color:#008ece;")
+      +navbar()
+      .container
+        h2.text-lg-start.text-center.text-white.mt-5="Бронируйте туры онлайн"
+        ul.nav.container-lg.d-flex.flex-row.flex-lg-row.mb-lg-2#MenuTab
+          .row.text-center
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" target="_blank" href="podbor_tura.html")="Туры"
+            li.nav-item.col-lg-auto.col-4.px-0
+              a.nav-link.active(aria-current="page" href="hotel_avia.html" target="_blank")="Отель+Перелет"
+            li.nav-item.col-lg-auto.col-4.px-0
+                a.nav-link.active(aria-current="page" target="_blank" href="#")="Отели"
+            li.nav-item.col-lg-auto.col-4.px-0
+                a.nav-link.active(aria-current="page" style="border-bottom:4px solid yellow;" href="#")="Авиабилеты"
+            li.nav-item.col-lg-auto.col-4.px-0
+                a.nav-link.active(aria-current="page" target="_blank" href="#")="Экскурсии"
+            li.nav-item.col-lg-auto.col-4.px-0
+                a.nav-link.active(aria-current="page" target="_blank" href="#")="Трансферы"
+            li.nav-item.col-lg-auto.col-4.px-0
+                a.nav-link.active(aria-current="page" target="_blank" href="#")="Аренда авто"
+            li.nav-item.col-lg-auto.col-4.px-0
+                a.nav-link.active(aria-current="page" target="_blank" href="#")="Распродажи"
+            li.nav-item.col-lg-auto.col-4.px-0
+                a.nav-link.active(aria-current="page" target="_blank" href="#")="Оставить заявку"
+      #MenuForm1
+        form.container-lg.d-flex.flex-lg-row.flex-column.mt-2.mb-4.mb-lg-0#Menu1
+          select.form-select#Select1.my-1.my-lg-0(aria-label="Select1")
+            option(selected)="Город вылета:"
+            optgroup(label="Россия")
+              option(value="Moscow")="Москва"
+              option(value="Spb")="Санкт-Петербург"
+              option(value="Kazan")="Казань"
+              option(value="Novosibirsk")="Новосибирск"
+              option(value="Volgograd")="Волгоград"
+              option(value="Krasnodar")="Краснодар"
+              option(value="NNovgorod")="Нижний Новгород"
+            optgroup(label="Беларусь")
+              option(value="Minsk")="Минск"
+              option(value="Vitebsk")="Витебск" 
+          input.form-control.my-1.my-lg-0(type="text" placeholder="Куда:")
+          input.form-control.my-1.my-lg-0(type="text" placeholder="Количество взрослых:")
+          input.form-control.my-1.my-lg-0(type="text" placeholder="Количество детей:")
+          input.btn.btn-warning.my-1.my-lg-0(type="submit" value="Найти")
+    .container.my-5#Info1
+      .row.d-flex.flex-lg-row.flex-column.justify-content-center.align-items.center
+        .col-lg-4.d-flex.col-12
+          img.me-2(src="img/podbor/podbor1.png" style="height:80px; width:80px;")
+          .d-flex.flex-column.w-75
+            h6="Служба заботы 24/7"
+            p="Наша служба заботы поможет с бронированием авиабилета. Если у вас возник вопрос или трудности во время поездки, оператор будет круглосуточно на связи и найдёт решение в кратчайший срок"
+        .col-lg-4.d-flex.col-12
+          img.me-2(src="img/podbor/podbor2.png" style="height:80px; width:80px;")
+          .d-flex.flex-column.w-75
+            h6="Дешевые авиабилеты"
+            p="У нас можно купить авиабилеты онлайн по наиболее выгодным ценам. Узнайте 12 наших преимуществ, благодаря которым мы подбираем для вас самые дешевые авиабилеты"
+        .col-lg-4.d-flex.col-12
+          img.me-2(src="img/podbor/podbor3.png" style="height:80px; width:80px;")
+          .d-flex.flex-column.w-75
+            h6="Качество и надежность"
+            p="AviaTour - аккредитованный агент IATA (Международная ассоциация воздушного транспорт. За 25 лет нашей работы нашими услугами воспользовались более 10 миллионов пассажиров"
+    .container.d-flex.flex-column.align-items-center.mt-5#content4
+      h1.text-center="Авиаскидки"
+      .container.row.d-flex.flex-row
+        +content(4,1)
+        +content(4,2)
+        +content(4,3)
+        +content(4,4)
+        +content(4,5)
+        +content(4,6)
+      a.btn.btn-outline-primary.mt-4(role="button" href="#")="Показать больше"
+    .container.mt-5
+      h1.text-center.mb-5="12 причин покупать билеты у AviaTour"
+      div
+        p.mb-0.mx-2.mx-sm-0(style="font-weight:bold")="1. Кешбек"
+        p.mx-2.mx-sm-0(style="font-size:12px;")="При покупке авиабилета онлайн на нашем сайте начисляется кешбэк в размере 3% от стоимости билета. Кешбэк выдается в виде промокода/сертификата, которым можно воспользоваться для оплаты будущих путешествий. Например, если авиабилет стоит 30 000 руб, то вы получите 900 руб. (3%) в виде промокода/сертификата на покупку тура. Вы можете передавать или дарить этот промокод/сертификат своим друзьям и знакомым"
+      div
+        p.mb-0.mx-2.mx-sm-0(style="font-weight:bold")="2. Разные авиакомпании"
+        p.mx-2.mx-sm-0(style="font-size:12px;")="Когда по нужному вам маршруту летают несколько авиакомпаний, то на нашем сайте вы сможете забронировать перелет туда и обратно на разных авиакомпаниях, что может быть значительно дешевле. Например, туда летим на S7, а обратно Аэрофлотом"
+      div
+        p.mb-0.mx-2.mx-sm-0(style="font-weight:bold")="3. Дешевые лоукост билеты"
+        p.mx-2.mx-sm-0(style="font-size:12px;")="На нашем сайте вы можете найти лоукост перелеты по цене ниже, чем на официальном сайте самой авиакомпании. Это связано с тем, что некоторые лоукост авиакомпании дают разные тарифы и условия под каждый рынок, например, специальные цены получают пассажиры из стран Балтии"
+      div
+        p.mb-0.mx-2.mx-sm-0(style="font-weight:bold")="4. Чартерные билеты и комбинации с чартерам"
+        p.mx-2.mx-sm-0(style="font-size:12px;")="Все чартерные авиабилеты TEZ TOUR и чартеры наших партнеров доступны для онлайн бронирования по низкой цене. Также, мы предлагаем комбинации с чартерами (селф-коннект), например, из Анталии в Москву на чартере, а из Москвы в Казань на Аэрофлоте"
+      div
+        p.mb-0.mx-2.mx-sm-0(style="font-weight:bold")="5. Селф-коннект"
+        p.mx-2.mx-sm-0(style="font-size:12px;")="Селф-коннект — это самостоятельная стыковка между двумя рейсами. Долететь до Берлина на S7, а там сесть на Ryanair и улететь на Майорку по более низкой цене? Сайты авиакомпаний вам этого не покажут, а на нашем сайте вы запросто найдете и забронируете такой вариант. Конечно, есть риск, что стыковка «слетит» при задержке одного из рейсов, но мы продаем такие рейсы под собственную гарантию: если первый рейс задержат, то заботы о том, чтобы доставить вас в пункт назначения, возьмет на себя мы"
+      div
+        p.mb-0.mx-2.mx-sm-0(style="font-weight:bold")="6. Непубличные тарифы"
+        p.mx-2.mx-sm-0(style="font-size:12px;")="Некоторые тарифы доступны только на нашем сайте и их нет на сайтах авиакомпаний. На туристических направлениях часть мест продает сама авиакомпания, а часть мест распределяется между туроператорами, которые их продают по более низким ценам"
+      div
+        p.mb-0.mx-2.mx-sm-0(style="font-weight:bold")="7. Тарифы для разных рынков"
+        p.mx-2.mx-sm-0(style="font-size:12px;")="Для некоторых рынков авиакомпании дают специальные тарифы или условия, а благодаря тому, что у TEZ TOUR есть множество IATA аккредитованных офисов по всему миру, то это позволяет нам найти самую низку стоимость авиабилета для наших клиентов"
+      div
+        p.mb-0.mx-2.mx-sm-0(style="font-weight:bold")="8. Возможность поиска дешевых авиабилетов без указания места назначения"
+        p.mx-2.mx-sm-0(style="font-size:12px;")="Очень удобный инструмент, если вы ищете самый дешевый перелет из вашего региона, и, в принципе, не имеет значение куда. Для этого в поле Куда оставьте куда угодно. Например, можно посмотреть самые дешевые авиабилеты из Москвы на 13 июня на все возможные направления, или в поле куда можно указать целые континенты и страны (Азия, Европа, США и т.д)"
+      div
+        p.mb-0.mx-2.mx-sm-0(style="font-weight:bold")="9. Расширенный поиск дат перелета"
+        p.mx-2.mx-sm-0(style="font-size:12px;")="Кроме поиска по конкретным датам, наш поисковик дает возможность искать дешевые билеты на неделю, месяц или пол года вперед. Например, у Вас есть свободная неделя с 17 июня по 24 июня. Чтобы найти возможные перелеты, в поле 'Туда' выберите 'Период вылета' и укажите нужные даты. Так же в поле 'Обратно' кроме определенной даты, интервала дат и возвращения в любое время, можно указать время пребывания, например от 2 до 7 ночей"
+      div
+        p.mb-0.mx-2.mx-sm-0(style="font-weight:bold")="10. Войдирование"
+        p.mx-2.mx-sm-0(style="font-size:12px;")="Войдирование (от слова VOID, аннулировать) — это возможность бесплатно аннулировать билет в тот же день. Если вы купили билет на сайте авиакомпании, а потом передумали, или поняли, что совершили ошибку при оформлении, то авиакомпания в лучшем случае предложит вам его или обменять со штрафом, или сдать со штрафом, а если билет по самому дешевому тарифу, он и вовсе сгорит. При бронировании на нашем сайте у вас есть возможность в день покупки билет «завойдировать» и отменить бесплатно с возвратом средств, за вычетом банковской комиссии за обработку платежа"
+      div
+        p.mb-0.mx-2.mx-sm-0(style="font-weight:bold")="11. Возврат невозвратных билетов"
+        p.mx-2.mx-sm-0(style="font-size:12px;")="Благодаря нашей услуге «страховка от невылета» вы можете отменить забронированный билет в связи с болезнью или другими форс-мажорными обстоятельствами. В таких случаях часть стоимости билета вернется вам в виде промокода на покупку будущих тур. услуг"
+      div
+        p.mb-0.mx-2.mx-sm-0(style="font-weight:bold")="12. Авиаскидки"
+        p.mx-2.mx-sm-0(style="font-size:12px;")="Авиаскидки - это сервис, который собирает все авиабилеты со скидками до -85% по разным направлениям с вылетом из городов России, Беларуси, Украины и Казахстана. Сервис авиаскидок каждые 5 мин отслеживает акции и распродажи авиакомпаний, предлагая все актуальные предложения пользователям нашего сайта. Перейти в раздел «Авиаскидок»"
+    +footer()
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous")

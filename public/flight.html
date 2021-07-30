@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Авиабилеты</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="css/style_podbor_tura.css">
+	</head>
+	<body>
+		<div class="container-fluid pb-lg-5" id="Menu" style="background-color:#008ece;">
+			<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#008ece;">
+				<div class="container-lg"><a class="navbar-brand" href="index.html">AviaTour</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".Nav_Avia" aria-controls="Nav_Avia" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+					<div class="collapse navbar-collapse Nav_Avia">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-lg-1">
+							<li class="nav-item"><a class="nav-link active" href="index.html">Главная</a></li>
+							<li class="nav-item dropdown"><a class="nav-link active dropdown-toggle" id="ForTourist" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Туристам</a>
+								<ul class="dropdown-menu" aria-labelledby="ForTourist">
+									<li><a class="dropdown-item" href="podbor_tura.html">Подбор тура</a></li>
+									<li><a class="dropdown-item" href="promotions.html">Акции и предложения</a></li>
+									<li><a class="dropdown-item" href="beach.html">Типы отдыха</a></li>
+									<li><a class="dropdown-item" href="catalog.html">Каталог отелей</a></li>
+									<li><a class="dropdown-item" href="flight.html">Авиаперелеты</a></li>
+									<li><a class="dropdown-item" href="#">Визы и паспорта</a></li>
+									<li><a class="dropdown-item" href="#">Памятка туриста</a></li>
+									<li><a class="dropdown-item" href="#">Выдача документов</a></li>
+									<li><a class="dropdown-item" href="#">Новости</a></li>
+									<li><a class="dropdown-item" href="#">Купить тур онлайн</a></li>
+									<li><a class="dropdown-item" href="#">Отзывы и предложения</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown"><a class="nav-link active dropdown-toggle" id="ForAgency" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Агентствам</a>
+								<ul class="dropdown-menu" aria-labelledby="ForAgency">
+									<li><a class="dropdown-item" href="#">Агентская страница</a></li>
+									<li><a class="dropdown-item" href="#">Кабинет агентства</a></li>
+									<li><a class="dropdown-item" href="#">Сотрудничество</a></li>
+									<li><a class="dropdown-item" href="#">Франчайзинг</a></li>
+									<li><a class="dropdown-item" href="#">Выдача документов</a></li>
+									<li><a class="dropdown-item" href="#">Вопросы и ответы</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown"><a class="nav-link active dropdown-toggle" id="BuyPlace" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Где купить</a>
+								<ul class="dropdown-menu" aria-labelledby="BuyPlace">
+									<li><a class="dropdown-item" href="#">Купить онлайн</a></li>
+									<li><a class="dropdown-item" href="#">Купить в агентстве</a></li>
+								</ul>
+							</li>
+						</ul>
+						<form class="d-flex">
+							<input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search"/>
+							<button class="btn btn-warning" type="submit">Найти</button>
+						</form>
+					</div>
+				</div>
+			</nav>
+			<div class="container">
+				<h2 class="text-lg-start text-center text-white mt-5">Бронируйте туры онлайн</h2>
+				<ul class="nav container-lg d-flex flex-row flex-lg-row mb-lg-2" id="MenuTab">
+					<div class="row text-center">
+						<li class="nav-item col-lg-auto col-4 px-0"><a class="nav-link active" aria-current="page" target="_blank" href="podbor_tura.html">Туры</a></li>
+						<li class="nav-item col-lg-auto col-4 px-0"><a class="nav-link active" aria-current="page" href="hotel_avia.html" target="_blank">Отель+Перелет</a></li>
+						<li class="nav-item col-lg-auto col-4 px-0"><a class="nav-link active" aria-current="page" target="_blank" href="#">Отели</a></li>
+						<li class="nav-item col-lg-auto col-4 px-0"><a class="nav-link active" aria-current="page" style="border-bottom:4px solid yellow;" href="#">Авиабилеты</a></li>
+						<li class="nav-item col-lg-auto col-4 px-0"><a class="nav-link active" aria-current="page" target="_blank" href="#">Экскурсии</a></li>
+						<li class="nav-item col-lg-auto col-4 px-0"><a class="nav-link active" aria-current="page" target="_blank" href="#">Трансферы</a></li>
+						<li class="nav-item col-lg-auto col-4 px-0"><a class="nav-link active" aria-current="page" target="_blank" href="#">Аренда авто</a></li>
+						<li class="nav-item col-lg-auto col-4 px-0"><a class="nav-link active" aria-current="page" target="_blank" href="#">Распродажи</a></li>
+						<li class="nav-item col-lg-auto col-4 px-0"><a class="nav-link active" aria-current="page" target="_blank" href="#">Оставить заявку</a></li>
+					</div>
+				</ul>
+			</div>
+			<div id="MenuForm1">
+				<form class="container-lg d-flex flex-lg-row flex-column mt-2 mb-4 mb-lg-0" id="Menu1">
+					<select class="form-select my-1 my-lg-0" id="Select1" aria-label="Select1">
+						<option selected>Город вылета:</option>
+						<optgroup label="Россия">
+							<option value="Moscow">Москва</option>
+							<option value="Spb">Санкт-Петербург</option>
+							<option value="Kazan">Казань</option>
+							<option value="Novosibirsk">Новосибирск</option>
+							<option value="Volgograd">Волгоград</option>
+							<option value="Krasnodar">Краснодар</option>
+							<option value="NNovgorod">Нижний Новгород</option>
+						</optgroup>
+						<optgroup label="Беларусь">
+							<option value="Minsk">Минск</option>
+							<option value="Vitebsk">Витебск</option>
+						</optgroup>
+					</select>
+					<input class="form-control my-1 my-lg-0" type="text" placeholder="Куда:">
+					<input class="form-control my-1 my-lg-0" type="text" placeholder="Количество взрослых:">
+					<input class="form-control my-1 my-lg-0" type="text" placeholder="Количество детей:">
+					<input class="btn btn-warning my-1 my-lg-0" type="submit" value="Найти">
+				</form>
+			</div>
+		</div>
+		<div class="container my-5" id="Info1">
+			<div class="row d-flex flex-lg-row flex-column justify-content-center align-items center">
+				<div class="col-lg-4 d-flex col-12"><img class="me-2" src="img/podbor/podbor1.png" style="height:80px; width:80px;">
+					<div class="d-flex flex-column w-75">
+						<h6>Служба заботы 24/7</h6>
+						<p>Наша служба заботы поможет с бронированием авиабилета. Если у вас возник вопрос или трудности во время поездки, оператор будет круглосуточно на связи и найдёт решение в кратчайший срок</p>
+					</div>
+				</div>
+				<div class="col-lg-4 d-flex col-12"><img class="me-2" src="img/podbor/podbor2.png" style="height:80px; width:80px;">
+					<div class="d-flex flex-column w-75">
+						<h6>Дешевые авиабилеты</h6>
+						<p>У нас можно купить авиабилеты онлайн по наиболее выгодным ценам. Узнайте 12 наших преимуществ, благодаря которым мы подбираем для вас самые дешевые авиабилеты</p>
+					</div>
+				</div>
+				<div class="col-lg-4 d-flex col-12"><img class="me-2" src="img/podbor/podbor3.png" style="height:80px; width:80px;">
+					<div class="d-flex flex-column w-75">
+						<h6>Качество и надежность</h6>
+						<p>AviaTour - аккредитованный агент IATA (Международная ассоциация воздушного транспорт. За 25 лет нашей работы нашими услугами воспользовались более 10 миллионов пассажиров</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container d-flex flex-column align-items-center mt-5" id="content4">
+			<h1 class="text-center">Авиаскидки</h1>
+			<div class="container row d-flex flex-row">
+				<div class="col-lg-4 col-md-6 col-12 g-4"><a href="#"><img class="w-100 d-block con-col rounded-3" src="img/content4/content4_1.png" alt="..."/></a></div>
+				<div class="col-lg-4 col-md-6 col-12 g-4"><a href="#"><img class="w-100 d-block con-col rounded-3" src="img/content4/content4_2.png" alt="..."/></a></div>
+				<div class="col-lg-4 col-md-6 col-12 g-4"><a href="#"><img class="w-100 d-block con-col rounded-3" src="img/content4/content4_3.png" alt="..."/></a></div>
+				<div class="col-lg-4 col-md-6 col-12 g-4"><a href="#"><img class="w-100 d-block con-col rounded-3" src="img/content4/content4_4.png" alt="..."/></a></div>
+				<div class="col-lg-4 col-md-6 col-12 g-4"><a href="#"><img class="w-100 d-block con-col rounded-3" src="img/content4/content4_5.png" alt="..."/></a></div>
+				<div class="col-lg-4 col-md-6 col-12 g-4"><a href="#"><img class="w-100 d-block con-col rounded-3" src="img/content4/content4_6.png" alt="..."/></a></div>
+			</div><a class="btn btn-outline-primary mt-4" role="button" href="#">Показать больше</a>
+		</div>
+		<div class="container mt-5">
+			<h1 class="text-center mb-5">12 причин покупать билеты у AviaTour</h1>
+			<div>
+				<p class="mb-0 mx-2 mx-sm-0" style="font-weight:bold">1. Кешбек</p>
+				<p class="mx-2 mx-sm-0" style="font-size:12px;">При покупке авиабилета онлайн на нашем сайте начисляется кешбэк в размере 3% от стоимости билета. Кешбэк выдается в виде промокода/сертификата, которым можно воспользоваться для оплаты будущих путешествий. Например, если авиабилет стоит 30 000 руб, то вы получите 900 руб. (3%) в виде промокода/сертификата на покупку тура. Вы можете передавать или дарить этот промокод/сертификат своим друзьям и знакомым</p>
+			</div>
+			<div>
+				<p class="mb-0 mx-2 mx-sm-0" style="font-weight:bold">2. Разные авиакомпании</p>
+				<p class="mx-2 mx-sm-0" style="font-size:12px;">Когда по нужному вам маршруту летают несколько авиакомпаний, то на нашем сайте вы сможете забронировать перелет туда и обратно на разных авиакомпаниях, что может быть значительно дешевле. Например, туда летим на S7, а обратно Аэрофлотом</p>
+			</div>
+			<div>
+				<p class="mb-0 mx-2 mx-sm-0" style="font-weight:bold">3. Дешевые лоукост билеты</p>
+				<p class="mx-2 mx-sm-0" style="font-size:12px;">На нашем сайте вы можете найти лоукост перелеты по цене ниже, чем на официальном сайте самой авиакомпании. Это связано с тем, что некоторые лоукост авиакомпании дают разные тарифы и условия под каждый рынок, например, специальные цены получают пассажиры из стран Балтии</p>
+			</div>
+			<div>
+				<p class="mb-0 mx-2 mx-sm-0" style="font-weight:bold">4. Чартерные билеты и комбинации с чартерам</p>
+				<p class="mx-2 mx-sm-0" style="font-size:12px;">Все чартерные авиабилеты TEZ TOUR и чартеры наших партнеров доступны для онлайн бронирования по низкой цене. Также, мы предлагаем комбинации с чартерами (селф-коннект), например, из Анталии в Москву на чартере, а из Москвы в Казань на Аэрофлоте</p>
+			</div>
+			<div>
+				<p class="mb-0 mx-2 mx-sm-0" style="font-weight:bold">5. Селф-коннект</p>
+				<p class="mx-2 mx-sm-0" style="font-size:12px;">Селф-коннект — это самостоятельная стыковка между двумя рейсами. Долететь до Берлина на S7, а там сесть на Ryanair и улететь на Майорку по более низкой цене? Сайты авиакомпаний вам этого не покажут, а на нашем сайте вы запросто найдете и забронируете такой вариант. Конечно, есть риск, что стыковка «слетит» при задержке одного из рейсов, но мы продаем такие рейсы под собственную гарантию: если первый рейс задержат, то заботы о том, чтобы доставить вас в пункт назначения, возьмет на себя мы</p>
+			</div>
+			<div>
+				<p class="mb-0 mx-2 mx-sm-0" style="font-weight:bold">6. Непубличные тарифы</p>
+				<p class="mx-2 mx-sm-0" style="font-size:12px;">Некоторые тарифы доступны только на нашем сайте и их нет на сайтах авиакомпаний. На туристических направлениях часть мест продает сама авиакомпания, а часть мест распределяется между туроператорами, которые их продают по более низким ценам</p>
+			</div>
+			<div>
+				<p class="mb-0 mx-2 mx-sm-0" style="font-weight:bold">7. Тарифы для разных рынков</p>
+				<p class="mx-2 mx-sm-0" style="font-size:12px;">Для некоторых рынков авиакомпании дают специальные тарифы или условия, а благодаря тому, что у TEZ TOUR есть множество IATA аккредитованных офисов по всему миру, то это позволяет нам найти самую низку стоимость авиабилета для наших клиентов</p>
+			</div>
+			<div>
+				<p class="mb-0 mx-2 mx-sm-0" style="font-weight:bold">8. Возможность поиска дешевых авиабилетов без указания места назначения</p>
+				<p class="mx-2 mx-sm-0" style="font-size:12px;">Очень удобный инструмент, если вы ищете самый дешевый перелет из вашего региона, и, в принципе, не имеет значение куда. Для этого в поле Куда оставьте куда угодно. Например, можно посмотреть самые дешевые авиабилеты из Москвы на 13 июня на все возможные направления, или в поле куда можно указать целые континенты и страны (Азия, Европа, США и т.д)</p>
+			</div>
+			<div>
+				<p class="mb-0 mx-2 mx-sm-0" style="font-weight:bold">9. Расширенный поиск дат перелета</p>
+				<p class="mx-2 mx-sm-0" style="font-size:12px;">Кроме поиска по конкретным датам, наш поисковик дает возможность искать дешевые билеты на неделю, месяц или пол года вперед. Например, у Вас есть свободная неделя с 17 июня по 24 июня. Чтобы найти возможные перелеты, в поле 'Туда' выберите 'Период вылета' и укажите нужные даты. Так же в поле 'Обратно' кроме определенной даты, интервала дат и возвращения в любое время, можно указать время пребывания, например от 2 до 7 ночей</p>
+			</div>
+			<div>
+				<p class="mb-0 mx-2 mx-sm-0" style="font-weight:bold">10. Войдирование</p>
+				<p class="mx-2 mx-sm-0" style="font-size:12px;">Войдирование (от слова VOID, аннулировать) — это возможность бесплатно аннулировать билет в тот же день. Если вы купили билет на сайте авиакомпании, а потом передумали, или поняли, что совершили ошибку при оформлении, то авиакомпания в лучшем случае предложит вам его или обменять со штрафом, или сдать со штрафом, а если билет по самому дешевому тарифу, он и вовсе сгорит. При бронировании на нашем сайте у вас есть возможность в день покупки билет «завойдировать» и отменить бесплатно с возвратом средств, за вычетом банковской комиссии за обработку платежа</p>
+			</div>
+			<div>
+				<p class="mb-0 mx-2 mx-sm-0" style="font-weight:bold">11. Возврат невозвратных билетов</p>
+				<p class="mx-2 mx-sm-0" style="font-size:12px;">Благодаря нашей услуге «страховка от невылета» вы можете отменить забронированный билет в связи с болезнью или другими форс-мажорными обстоятельствами. В таких случаях часть стоимости билета вернется вам в виде промокода на покупку будущих тур. услуг</p>
+			</div>
+			<div>
+				<p class="mb-0 mx-2 mx-sm-0" style="font-weight:bold">12. Авиаскидки</p>
+				<p class="mx-2 mx-sm-0" style="font-size:12px;">Авиаскидки - это сервис, который собирает все авиабилеты со скидками до -85% по разным направлениям с вылетом из городов России, Беларуси, Украины и Казахстана. Сервис авиаскидок каждые 5 мин отслеживает акции и распродажи авиакомпаний, предлагая все актуальные предложения пользователям нашего сайта. Перейти в раздел «Авиаскидок»</p>
+			</div>
+		</div>
+		<footer class="pt-4 my-lg-5 mb-4 pt-lg-5 border-top md-text-start">
+			<div class="row justify-content-center">
+				<div class="col-6 col-lg-2 ms-0 ms-xl-3 mb-lg-0 mb-2"><a class="foot_a_H" href="#">
+						<h6>Туристам</h6></a>
+					<ul class="list-unstyled text-small">
+						<li><a class="link-secondary" href="#">Подбор тура</a></li>
+						<li><a class="link-secondary" href="#">Акции и спецпредложения</a></li>
+						<li><a class="link-secondary" href="#">Типы отдыха</a></li>
+						<li><a class="link-secondary" href="#">Каталог отелей</a></li>
+						<li><a class="link-secondary" href="#">Авиаперелеты</a></li>
+						<li><a class="link-secondary" href="#">Визы и паспорта</a></li>
+						<li><a class="link-secondary" href="#">Памятка туриста</a></li>
+						<li><a class="link-secondary" href="#">Выдача документов</a></li>
+						<li><a class="link-secondary" href="#">Новости</a></li>
+						<li><a class="link-secondary" href="#">Отзывы и предложения</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-lg-2 ms-0 ms-xl-3 mb-lg-0 mb-2"><a class="foot_a_H" href="#">
+						<h6>Агентствам</h6></a>
+					<ul class="list-unstyled text-small">
+						<li><a class="link-secondary" href="#">Агентская страница</a></li>
+						<li><a class="link-secondary" href="#">Кабинет агентства</a></li>
+						<li><a class="link-secondary" href="#">Сотрудничество</a></li>
+						<li><a class="link-secondary" href="#">Франчайзинг</a></li>
+						<li><a class="link-secondary" href="#">Выдача документов</a></li>
+						<li><a class="link-secondary" href="#">Вопросы и ответы</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-lg-2 ms-0 ms-xl-3 mb-lg-0 mb-2"><a class="foot_a_H" href="#">
+						<h6>О компании</h6></a>
+					<ul class="list-unstyled text-small">
+						<li><a class="link-secondary" href="#">О компании</a></li>
+						<li><a class="link-secondary" href="#">Новостной центр</a></li>
+						<li><a class="link-secondary" href="#">Пресса о нас</a></li>
+						<li><a class="link-secondary" href="#">Пресс-релизы</a></li>
+						<li><a class="link-secondary" href="#">Вакансии</a></li>
+						<li><a class="link-secondary" href="#">Контакты</a></li>
+						<li><a class="link-secondary" href="#">Награды</a></li>
+						<li><a class="link-secondary" href="#">Партнеры</a></li>
+						<li><a class="link-secondary" href="#">Корпоративная культура</a></li>
+						<li><a class="link-secondary" href="#">Партнеры в регионах</a></li>
+						<li><a class="link-secondary" href="#">Принимающие офисы</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-lg-2 ms-0 ms-xl-3 mb-lg-0 mb-2"><a class="foot_a_H" href="#">
+						<h6>Корпоративным клиентам</h6></a>
+					<ul class="list-unstyled text-small">
+						<li><a class="link-secondary" href="#">Корпоративный отдых и проекты</a></li>
+						<li><a class="link-secondary" href="#">Примеры корпоративных программ</a></li>
+						<li><a class="link-secondary" href="#">Оформление заявки</a></li>
+						<li><a class="link-secondary" href="#">Отели с конференц-залами</a></li>
+						<li><a class="link-secondary" href="#">Нестандартные варианты размещения</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	</body>
+</html>

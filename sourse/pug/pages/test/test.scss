@@ -1,0 +1,134 @@
+@import "test_import";
+#MenuTab{
+    align-items: start;
+    a{
+        color:white; 
+    }
+}
+footer{
+    li{
+        margin-top:5px;
+    }
+    a{
+        font-size: 13px;
+    }
+    .foot_a_H{
+        text-decoration: none;
+        color:black;
+    }
+}
+.asvg{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+#content1{
+    background-color:#f8f8f8;
+    .con-col{
+        object-fit: cover;
+    }
+}
+#MenuForm1, #MenuForm2{
+    select, input{
+        border-radius: 0;
+    }
+}
+#MenuForm1{
+    display:flex;
+}
+#MenuForm2{
+    display:none;
+}
+#carouselControls{
+    img{
+       object-fit: cover; 
+    }
+}
+#MenuBtn1{
+    border-bottom: 4px solid yellow;
+}
+#images{
+    p{
+        font-size:12px;
+        margin-top:5px;
+        color:grey;
+    }
+}
+svg{
+    color:grey;
+    fill:grey;
+}
+#promotions{
+    a{
+        width:25%;
+    }
+    img{
+        width:100%;
+        margin-bottom:20px;
+    }
+}
+.simple_row{
+    p{
+        font-size: 13px;
+    }
+}
+@media screen and (min-width:992px) {
+    #MenuTab{
+        margin-top: 50px;
+        width:100%;
+    }
+}
+@media screen and (max-width:992px){
+    #MenuForm1, #MenuForm2{
+        display: none;
+    }
+    #MenuBtn1, #MenuBtn2{
+        border-bottom: 0px solid yellow;
+    }
+    #carouselControls{
+        padding:0;
+    }
+    #MenuTab{
+        margin-left:0;
+    }
+    footer{
+        text-align:center;
+        ul{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width:767px){
+    #promotions{
+        a{
+            width:100%;
+            margin:auto;
+        }
+        h5{
+            text-align:center;
+        }
+        .promcont{
+            align-items:center;
+        }
+    }
+}
+@media screen and (max-width:576px){
+    .simpleBlock{
+        border-bottom: 2px solid #eaeaea;
+    }
+    #pred{
+        display:none;
+    }
+    #MenuTab{
+        a{
+            font-size:13px;
+            padding:0.3rem;
+        }
+    }
+}
+@media screen and (max-width:375px){
+    #MenuTab{
+        font-size:8px;
+    }
+}

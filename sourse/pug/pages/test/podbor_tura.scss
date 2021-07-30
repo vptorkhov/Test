@@ -1,0 +1,76 @@
+@import "test_import";
+#MenuTab{
+    align-items: start;
+    a{
+        color:white; 
+    }
+}
+footer{
+    li{
+        margin-top:5px;
+    }
+    a{
+        font-size: 13px;
+    }
+    .foot_a_H{
+        text-decoration: none;
+        color:black;
+    }
+}
+#content1{
+    background-color:#f8f8f8;
+    .con-col{
+        object-fit: cover;
+    }
+}
+#MenuForm1{
+    select, input{
+        border-radius: 0;
+    }
+}
+#Info1{
+    p{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:1200px){
+    #MenuTab{
+        a{
+            font-size:13px;
+        }
+    }
+}
+@media screen and (min-width:992px) {
+    #MenuTab{
+        margin-top: 50px;
+        width:100%;
+    }
+}
+@media screen and (max-width:992px){
+    #MenuTab{
+        margin-left:0;
+    }
+    #MenuForm1{
+        padding-bottom: 5px;
+        font-size: 12px;
+    }
+    footer{
+        text-align:center;
+        ul{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width:576px){
+    #MenuTab{
+        a{
+            font-size:13px;
+            padding:0.3rem;
+        }
+    }
+}
+@media screen and (max-width:375px){
+    #MenuTab{
+        font-size:8px;
+    }
+}
